@@ -1,23 +1,41 @@
-import React from 'react'
+import React from 'react';
+import { Link } from 'react-router-dom';
 
-const SignUp = ({ closeSignUp }) => {
+
+
+
+const LogIn = ({ closeSignUp }) => {
   return (
     <>
-        <div className="sign-up-component absolute h-510 w-300 bg-mainBackground/20 backdrop-blur rounded-sm left-0 right-0 ml-auto mr-auto">
-            <div className='flex flex-col justify-center w-250 mt-20 ml-4 mr-4 '>
-                <label htmlFor="userName" className='font-bold'>User Name</label>
-                <input type="text" name='userName' className='border border-current'/>
-                <label htmlFor="email" className='font-bold mt-2.5'>Email</label>
-                <input type="email" name='email' className='border border-current'/>
-                <label htmlFor="password" className='font-bold mt-2.5'>Password</label>
-                <input type="text" name='password' className='border border-current'/>
-            </div>
-            
-            <button className='mr-14 bg-btnColor h-30 w-100 rounded-sm mt-5 mb-5 cursor-pointer'
-          onClick={() => {closeSignUp(false)}}>Sign up</button>
+      <div className='absolute flex flex-col bg-mainBackground backdrop-blur-md h-full w-full justify-between items-center '>
+        <h4 className='font-semiBold text-xl ml-auto mr-auto mt-10'>Sign up</h4>
+
+        <div className='w-screen'> 
+          <form action="" className='flex flex-col justify-between  ml-10 mr-10'>
+            <label htmlFor="userName" className='font-semiBold text-xl '>User Name</label>
+            <input type="text" name='userName' className='h-inputH bg-elementsBg rounded-sm outline-none indent-1 text-lg' />
+
+            <label htmlFor="email" className='font-semiBold text-xl '>Email</label>
+            <input type="email" name='email' className='h-inputH bg-elementsBg rounded-sm outline-none indent-1 text-lg'/>
+
+            <label htmlFor="password" className='font-semiBold text-xl '>Password</label>
+            <input type="password" name='password' className='h-inputH bg-elementsBg rounded-sm outline-none indent-1 text-lg'/>
+          </form>
         </div>
+
+        <div className='flex justify-between w-full mb-10'>
+        <Link to='/workspace'>
+        <button className='ml-14 bg-elementsBg h-btnH w-btnW rounded-sm font-semiBold text-md cursor-pointer'>Sign Up</button>
+        </Link>
+        
+        
+        <button onClick={() => {closeSignUp(false)}}
+        className='mr-14 bg-elementsBg h-btnH w-btnW rounded-sm font-semiBold text-md cursor-pointer'>Dismiss</button>
+        </div>
+
+      </div>
     </>
   )
 }
 
-export default SignUp
+export default LogIn

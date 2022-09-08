@@ -3,26 +3,46 @@ module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     colors: {
-      'btnColor': '#FFA500',
-      'mainBackground': '#FFA500',
+      'mainBackground': 'rgba(255, 165, 0, 0.4)',
+      'elementsBg': '#FFA500',
+      'activeState': 'rgba(255, 165, 0, 0.5)',
+    },
+    fontSize: {
+      'sm': '12px',
+      'md': '18px',
+      'lg': '24px',
+      'xl': '30px',
+    },
+    fontWeight: {
+      'light': '300',
+      'regular': '400',
+      'medium': '500',
+      'semiBold': '600',
     },
     borderRadius: {
       'sm': '5px',
+      'full': '50px',
     },
     extend: {
-      width: {
-        '30': '30px',
-        '100': '100px',
-        '250': '250px',
-        '300': '300px',
-        'hei': '510px', 
+      boxShadow: {
+        'basic': ' 2px 15px 25px -2px rgba(0,0,0,0.15)',
+
       },
       height: {
-        '510': '600px',
+        'btnH': '30px',
+        'inputH': '40px',
+        'drawerH': '50px',
+        'featuresH': '1600px'
+
       },
-      margin: {
-        '40px': '40px'
+      width: {
+        'btnW': '100px',
+        'features': '300px',
+        'featuresW': '200px',
+        'inputW': '256px',
+
       },
+
     },
   },
   plugins: [],
